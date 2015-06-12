@@ -21,8 +21,13 @@ Library Database setup instructions:
 Start the postgres server and open another tab to run psql:
 
 guest=# CREATE DATABASE museum_tracker;
+<br>
 guest=# CREATE TABLE museums (id serial PRIMARY KEY, name varchar);
+<br>
 guest=# CREATE TABLE artworks (id serial PRIMARY KEY, name varchar);
+<br>
 guest=# CREATE DATABASE museum_tracker_test WITH TEMPLATE museum_tracker;
+<br>
 guest=# \c museum_tracker_test
+<br>
 museum_tracker_test=#
