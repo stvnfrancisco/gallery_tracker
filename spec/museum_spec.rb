@@ -36,4 +36,14 @@ describe(Museum) do
       expect(museum1).to(eq(museum2))
     end
   end
+
+  describe(".find") do
+      it("returns a museum by its ID") do
+        test_museum = Museum.new({:name => "Portland Ar Museum", :id => nil})
+        test_museum.save()
+        test_museum2 = Museum.new({:name => "Museum of Modern Art", :id => nil})
+        test_museum2.save()
+        expect(Museum.find(test_museum2.id())).to(eq(test_museum2))
+      end
+  end
 end
