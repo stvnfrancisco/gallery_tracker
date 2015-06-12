@@ -24,7 +24,7 @@ guest=# CREATE DATABASE museum_tracker;
 <br>
 guest=# CREATE TABLE museums (id serial PRIMARY KEY, name varchar);
 <br>
-guest=# CREATE TABLE artworks (id serial PRIMARY KEY, name varchar);
+guest=# CREATE TABLE artworks (id serial PRIMARY KEY, museum_id int, name varchar);
 <br>
 guest=# CREATE DATABASE museum_tracker_test WITH TEMPLATE museum_tracker;
 <br>
