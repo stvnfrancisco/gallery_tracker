@@ -44,7 +44,7 @@ post("/artworks") do
 end
 
 post('/museums/:id') do
-  list_id = params.fetch('id').to_i()
+  museum_id = params.fetch('id').to_i()
   @museum = Museum.find(museum_id)
   @artwork = params.fetch("artwork_name")
   @artwork = Artwork.new({:name => @artwork, :museum_id => museum_id})
