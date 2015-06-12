@@ -23,7 +23,6 @@ Start the postgres server and open another tab to run psql:
 guest=# CREATE DATABASE museum_tracker;
 guest=# CREATE TABLE museums (id serial PRIMARY KEY, name varchar);
 guest=# CREATE TABLE artworks (id serial PRIMARY KEY, name varchar);
-guest=# CREATE TABLE museums_artworks (museum_id int, artwork_id int, id serial PRIMARY KEY);
-guest=# CREATE DATABASE museum_tracker_test WITH TEMPLATE library;
+guest=# CREATE DATABASE museum_tracker_test WITH TEMPLATE museum_tracker;
 guest=# \c museum_tracker_test
 museum_tracker_test=#
