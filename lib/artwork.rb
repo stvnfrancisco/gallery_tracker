@@ -11,7 +11,7 @@ class Artwork
       artworks = []
       returned_artworks.each() do |artwork|
         name = artwork.fetch("name")
-        artwork_id = artwork.fetch("museum_id").to_i()
+        museum_id = artwork.fetch("museum_id").to_i()
         artworks.push(Artwork.new({:name => name, :museum_id => museum_id}))
       end
       artworks
