@@ -13,6 +13,7 @@ describe(Museum) do
       expect(museum.name()).to(eq("Portland Art Museum"))
     end
   end
+
   describe("#id") do
     it("sets the museums ID when you save it") do
       museum = Museum.new({:name => "Portland Art Museum", :id => nil})
@@ -41,9 +42,21 @@ describe(Museum) do
       it("returns a museum by its ID") do
         test_museum = Museum.new({:name => "Portland Ar Museum", :id => nil})
         test_museum.save()
-        test_museum2 = Museum.new({:name => "Museum of Modern Art", :id => nil})
+        test_museum2 = Museum.new({:name => "MoMA", :id => nil})
         test_museum2.save()
         expect(Museum.find(test_museum2.id())).to(eq(test_museum2))
       end
+  end
+
+  describe("#artworks") do
+    it("returns an array of artworks for that museum") do
+      test_museum = Museum.new({:name => "MoMA", :id => nil})
+      test_museum.save()
+      test_artwork = Artwork.new({:name => "Campbells Soup Can", :museum_id => test_museum.id()})
+      test_artwork.save()
+      test_artwork2 = Artwork.new({:name => "On the Balcony", :museum_id => test_museum.id()})
+      test_artwork2.save()
+      expect(test_museum.artworks()).to(eq([test_artwork, test_artwork2]))
+    end
   end
 end

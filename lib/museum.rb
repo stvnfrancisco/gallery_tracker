@@ -34,5 +34,16 @@ class Museum
         end
       end
       found_museum
+  end
+
+  define_method(:artworks) do
+    museum_artworks = []
+    artworks = DB.exec("SELECT * FROM artworks WHERE museum_id = #{self.id()};")
+    artworks.each() do |artwork|
+      name = artwork.fetch("name")
+      museum_id = artwork.fetch("museum_id").to_i()
+      museum_artworks.push(Artwork.new({:name => name, :museum_id => museum_id}))
     end
+    museum_artworks
+  end
 end
