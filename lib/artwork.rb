@@ -1,8 +1,8 @@
 class Artwork
-  attr_reader(:name, :museum_id)
+  attr_reader(:description, :museum_id)
 
   define_method(:initialize) do |attributes|
-      @name = attributes.fetch(:name)
+      @description = attributes.fetch(:description)
       @museum_id = attributes.fetch(:museum_id)
     end
 
@@ -10,18 +10,22 @@ class Artwork
       returned_artworks = DB.exec("SELECT * FROM artworks;")
       artworks = []
       returned_artworks.each() do |artwork|
-        name = artwork.fetch("name")
+        description = artwork.fetch("description")
         museum_id = artwork.fetch("museum_id").to_i()
-        artworks.push(Artwork.new({:name => name, :museum_id => museum_id}))
+        artworks.push(Artwork.new({:description => description, :museum_id => museum_id}))
       end
       artworks
     end
 
     define_method(:save) do
-      DB.exec("INSERT INTO artworks (name, museum_id) VALUES ('#{@name}', #{@museum_id});")
+      DB.exec("INSERT INTO artworks (description, museum_id) VALUES ('#{@description}', #{@museum_id});")
     end
 
     define_method(:==) do |another_artwork|
-      self.name().==(another_artwork.name()).&(self.museum_id().==(another_artwork.museum_id()))
+      self.description().==(another_artwork.description()).&(self.museum_id().==(another_artwork.museum_id()))
+    end
+
+    define_method(:delete) do
+      DB.exec("DELETE FROM artworks WHERE museum_id = #{self.museum_id()};")
     end
   end

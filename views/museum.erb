@@ -1,11 +1,18 @@
 <h1><%= @museum.name() %></h1>
 
 <% if @museum.artworks().any?() %>
-  <h3>Here are all the artworks in this museum:</h3>
+  <h3>Here are all the artworks in this gallery:</h3>
+
+  <!-- <form action="/museums/""<%= @museum.id() %>" method="post">
+     <input name= "_method" type="hidden" value="delete">
+  <br>
+  <label for="name">Delete artwork:</label>
+    <button type="submit" class="btn btn-danger">Delete artwork</button>
+  </form> -->
 
   <ul>
     <% @museum.artworks().each() do |artwork| %>
-      <li><%= artwork.name() %></li>
+      <li><h4><%= artwork.description() %><h4></li>
     <% end %>
   </ul>
 
@@ -13,21 +20,20 @@
     <p>No Artworks</p>
   <% end %>
 
-<div class="container">
-  <a href="/museums">View All Museums</a>
-  <br>
-  <a href="/museums/new">Add New Museum</a>
-</div>
-
-
-
-
   <form action="/museums/<%= @museum.id()%>" method="post">
     <div class="form-group">
-      <label class="form-label" for="artwork_name">Name of Artwork:</label>
-      <input class="form-control" id="artwork_name" name="artwork_name" type="text" 
-      <button type="submit" class="button btn">Save</button>
+      <label class="form-label" for="artwork_name">Add New Artwork:</label>
+      <input class="form-control" id="artwork_name" name="artwork_name" type="text">
+      <br>
+      <button type="submit" class="button btn-success"="btn btn-success">Save</button>
     </div>
   </form>
 
-  <a href="/">Home</a>
+  <div class="container">
+    <a href="/museums/<%= @museum.id() %>/edit">Edit  <%= @museum.name() %></a>
+    <br>
+    <a href="/museums">View All Galleries</a>
+    <br>
+    <a href="/museums/new">Add New Gallery</a>
+  </div>
+  <a href="/"><h>Home</h></a>

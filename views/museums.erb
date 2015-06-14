@@ -1,7 +1,7 @@
-<h1>Current Museums</h1>
+<h1>Current Galleries</h1>
 
 <% if @museums.any?() %>
-  <h3>Museums:</h3>
+  <h3>Galleries:</h3>
 
   <ul>
     <% @museums.each() do |museum| %>
@@ -11,8 +11,10 @@
 
 <% else %>
 
-    <p>No Museums</p>
+    <p>No galleries</p>
 
 <% end %>
 
+<a href="/museums/new">Add Gallery</a>
+<br>
 <a href="/">Home</a>

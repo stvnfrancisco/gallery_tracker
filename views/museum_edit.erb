@@ -1,0 +1,21 @@
+<h1>Update the <%=@museum.name() %> gallery </h1>
+
+<form action="/museums/<%= @museum.id() %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+
+  <label for="name">Rename gallery:</label>
+  <input id="name" name="name" type="text">
+
+  <button type="submit">Update</button>
+</form>
+
+<form action="/museums/<%= @museum.id() %>" method="post">
+  <input name= "_method" type="hidden" value="delete">
+<br>
+<label for="name">Delete gallery:</label>
+  <button type="submit" class="btn btn-danger">Delete gallery</button>
+</form>
+<br>
+<a href="/museums">back to Galleries</a>
+<br>
+<a href="/">Home</a>

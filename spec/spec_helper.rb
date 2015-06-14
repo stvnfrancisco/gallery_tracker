@@ -3,6 +3,7 @@ require('pry')
 require('pg')
 require('museum')
 require('artwork')
+require('capybara')
 
 DB = PG.connect({:dbname => 'museum_tracker_test'})
 
