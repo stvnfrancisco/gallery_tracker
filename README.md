@@ -1,3 +1,5 @@
+Note to Mike: I managed to get everything working yesterday aside from deleting artworks from the lists within the museums. I can delete the enitre museum... I'm waiting for my review before I push my most current edits. The main error is on line 32 in app.rb... I misspelled the instance variable @museum on that line. I also forgot to close out a couple lines for some submit buttons.
+
 Title: Museum Tracker
 
 by: Steven Francisco
