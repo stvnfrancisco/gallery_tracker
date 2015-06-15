@@ -75,10 +75,3 @@ delete("/museums/:id") do
   @museums = Museum.all()
   erb(:index)
 end
-
-# delete('/museums/:id') do
-#   @artwork = params.fetch("artwork_name")
-#   @artwork.delete()
-#   @artworks = Artwork.all()
-#   erb(:museum)
-# end

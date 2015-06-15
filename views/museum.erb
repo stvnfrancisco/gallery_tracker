@@ -3,13 +3,6 @@
 <% if @museum.artworks().any?() %>
   <h3>Here are all the artworks in this gallery:</h3>
 
-  <!-- <form action="/museums/""<%= @museum.id() %>" method="post">
-     <input name= "_method" type="hidden" value="delete">
-  <br>
-  <label for="name">Delete artwork:</label>
-    <button type="submit" class="btn btn-danger">Delete artwork</button>
-  </form> -->
-
   <ul>
     <% @museum.artworks().each() do |artwork| %>
       <li><h4><%= artwork.description() %><h4></li>

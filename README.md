@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Title: Gallery Tracker
+=======
+
+Title: Museum Tracker
 
 by: Steven Francisco
 
@@ -16,7 +20,11 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+<<<<<<< HEAD
 Gallery Tracker database setup instructions:
+=======
+Museum Tracker Database setup instructions:
+>>>>>>> 268a53c59ca4f46ac3f86199ec13a0a919ba8612
 
 Start the postgres server and open another tab to run psql:
 
