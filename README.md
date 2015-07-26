@@ -1,13 +1,10 @@
 Title: Gallery Tracker
 
-Title: Museum Tracker
-
 by: Steven Francisco
 
 This app will allow the user to add galleries and artworks to a database, and add artworks to the galleries.
 
 <p>To run this app in your browser:</p>
-<br>
 bash/terminal:
 <ol>
 <li> guest$ bundle</li>
@@ -18,7 +15,7 @@ bash/terminal:
 <li> guest$ ruby app.rb</li>
 </ol>
 <p>In browser run localhost:4567</p>
-
+<hr>
 Built using Ruby ver.: ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
 
 Please Bundle install the following Gems: 'sinatra' 'sinatra-contrib' 'rspec' 'capybara' 'pry'
