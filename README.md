@@ -6,6 +6,16 @@ by: Steven Francisco
 
 This app will allow the user to add galleries and artworks to a database, and add artworks to the galleries.
 
+To run this app in your browser:
+bash/terminal:
+1.) guest$ bundle
+2.) Open postgres in the terminal and run psql in another tab.
+3.) guest$ rake db:create
+4.) guest$ rake db:migrate
+5.) guest$ rake db:test:prepare
+6.) guest$ ruby app.rb
+In browser run localhost:4567
+
 Built using Ruby ver.: ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
 
 Please Bundle install the following Gems: 'sinatra' 'sinatra-contrib' 'rspec' 'capybara' 'pry'
@@ -17,22 +27,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-Gallery Tracker database setup instructions:
-
-Museum Tracker Database setup instructions:
-
-Start the postgres server and open another tab to run psql:
-
-guest=# CREATE DATABASE museum_tracker;
-<br>
-guest=# CREATE TABLE museums (id serial PRIMARY KEY, name varchar);
-<br>
-guest=# CREATE TABLE artworks (id serial PRIMARY KEY, museum_id int, description varchar);
-<br>
-guest=# CREATE DATABASE museum_tracker_test WITH TEMPLATE museum_tracker;
-<br>
-guest=# \c museum_tracker_test
-<br>
-museum_tracker_test=#
