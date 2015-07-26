@@ -6,15 +6,17 @@ by: Steven Francisco
 
 This app will allow the user to add galleries and artworks to a database, and add artworks to the galleries.
 
-To run this app in your browser:
+<p>To run this app in your browser:</p>
+<br>
 bash/terminal:
-1.) guest$ bundle
-2.) Open postgres in the terminal and run psql in another tab.
-3.) guest$ rake db:create
-4.) guest$ rake db:migrate
-5.) guest$ rake db:test:prepare
-6.) guest$ ruby app.rb
-In browser run localhost:4567
+<ul>
+<li>1.) guest$ bundle</li>
+<li>2.) Open postgres in the terminal and run psql in another tab.</li>
+<li>3.) guest$ rake db:create</li>
+<li>>4.) guest$ rake db:migrate</li>
+<li>5.) guest$ rake db:test:prepare</li>
+<li>6.) guest$ ruby app.rb</li>
+<li>In browser run localhost:4567</li>
 
 Built using Ruby ver.: ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
 
